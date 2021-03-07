@@ -2,6 +2,8 @@ package com.twiss.springboot.web;
 
 import com.twiss.springboot.domain.User;
 import com.twiss.springboot.service.UserService;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -18,6 +20,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
+    private Log log = LogFactory.getLog(UserController.class);
 
     @Autowired
     private UserService userService;
